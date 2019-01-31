@@ -44,28 +44,29 @@
 					<h1>Power laws' guide</h1>
 					<h3>Una introducción al estudio de las leyes de potencias</h3>
 					<p>
-						<small>Created by <a href="http://thebooort.github.io">Bart Ortiz</a> from <a href="https://twitter.com/geneura">GeNeura research group</a></small>
+						<small><a href="http://thebooort.github.io">Bart Ortiz</a> from <a href="https://twitter.com/geneura">GeNeura research group</a></small>
 					</p>
+					<p>Based on J. Newman paper</p>
+						<img width="108" height="38" data-src="img/cc.png">
 				</section>
 
 <!-- Introducion  -->
 				<section>
 					<section>
 						<h2>Introducción</h2>
-						<p>Slides ca $p(x)=Cx^{-\alpha} $ n be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<p>Un clásico: la campana de Gauss</p>
+					<img  data-src="img/gaussdist.png">
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						
+					  <p>Pero no todo lo que ves es Gaussiano.</p>
+					  <img  data-src="img/citydist.png">
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
+						
+					  <p>Sea $p(x)dx$ la fracción de ciudades con población entre $x$ y $dx$.</p><p> Si el histograma sigue una linea recta en un grafico a escala log-log $$\implies log(p(x))=-\alpha log(x)+c$$ donde $\alpha$ y $c$ son ctes.</p>
+					  <p> Tomando exponente a cada lado obtenemos:</p>$$p(x)=Cx^{-\alpha}$$
+					  <p>con $C=e^c$</p>
 						
 					</section>
 				</section>
@@ -75,21 +76,31 @@
 				<section>
 					<section>
 						<h2>Mediciones</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<p>Identificar una ley de potencias en la práctica es complicado.</p>
+						<p>Plotear es una forma común de contrastar nuestra hipótesis pero debemos tener CUIDADO </p>
+					
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						<h2>Caso práctico</h2>
+						<p>Efectos del ruido en nuestros gráficos</p>
+						 <img  data-src="img/plot1.png">
+					</section>
+					
+					<section>
+						<h2>¿Apaños?</h2>
+						<p>Variar el tamaño de los intervalos (normalizando) o usar la funcion de distribucion acumulada.</p>
+						 <img  data-src="img/plot2.png">
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						
+						<h2>¿Apaños?</h2>
+						<p>$$P(x)=\int_x^{\infty}p(z)dz $$</p>
+						$$P(x)=C\int_x^{\infty}z^{-\alpha}dz=\frac{C}{\alpha-1}x^{-(\alpha-1)} $$
+					</section>
+
+					<section>
+						<h2>Estimación de $\alpha$</h2>
+						$$\alpha=1+n(\sum_{i=1}^{n}log\frac{x_i}{x_{min}})^{-1}$$
+						$$\sigma = \sqrt{n}(\sum_{i=1}^{n}log\frac{x_i}{x_{min}})^{-1}=\frac{\alpha -1}{\sqrt{n}}$$
 					</section>
 				</section>
 
@@ -99,22 +110,26 @@
 				<section>
 					<section>
 						<h2>Ejemplos</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+<p>Como se va a poder comprobar, las leyes de potencias aparecen en muchos procesos de índole natural, tecnológica, social, etc.</p><p> Esta persistencia nos lleva a preguntarnos qué mecanismos están detrás de la formación de estas distribuciones (o incluso si hay un único mecanismo).</p>
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+	  <img  data-src="img/ex1.png">
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						
+		  <img  data-src="img/ex2.png">
 					</section>
+					<section>
+		  <img  data-src="img/ex3.png">
+					</section>
+					<section>
+		  <img  data-src="img/ex4.png">
+					</section>
+					<section>
+					  <h2>Más patrones extraños</h2>
+		  <img  data-src="img/ex5.png">
+					</section>
+
+
 				</section>
 
 <!-- Math prop  -->
