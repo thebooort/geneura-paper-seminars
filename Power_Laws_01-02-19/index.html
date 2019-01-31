@@ -136,23 +136,50 @@
 				
 				<section>
 					<section>
-						<h2>Algunas propiedades matemáticas</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<h2>Algunas ideas matemáticas</h2>
+
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						<h2>Normalización</h2>
+					
+						$$1=\int_{x_{min}}^{\infty}p(x)dx=C\int x^{-\alpha}dx=$$ $$=\frac{C}{1-\alpha}[x^{-alpha+1}]^{\infty}_{x_{min}}$$
+
+						Flag: $\alpha>1$
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
+						<h2>Momentos</h2>
+						$$\bar{x}=\int_{x_{min}}^{\infty}xp(x)dx=C\int_{x_{min}}^{\infty}x^{-\alpha+1}dx=$$ $$=\frac{C}{2-\alpha}[x^{-\alpha+2}]^{\infty}_{x_{min}}$$
+						$Flag: \alpha>2$
+					</section>
+					<section>
+						<h2>80/20 Rule</h2>
+						<p>¿Dónde cae el grueso de la distribución?</p>
+						Suponiendo que la media esté bien definida tenemos un valor que corta a la poblacion en dos: $x_{1/2}$
+						$$\int_{x_{1/2}}^{\infty}p(x)dx=1/2\int_{x_{min}}^{\infty}p(x)dx$$
+						donde $$x_{1/2}=2^{1/\alpha-1}x_{min}$$
+						<p>¿Qué cantidad hay en la mitad superior?</p>
+						$$2^{-(\alpha-2)/(\alpha-1)}$$
+					</section>
+					<section>
+						<h2>80/20 Rule</h2>
+						<p>LLevándolo al caso general</p>
+						Sea W(x) el conjunto de personas de nuestra distribucion que exede cierta cantidad x:
+						$$W(x)=\frac{\int_{x}^{\infty}zp(z)dz}{\int_{x_{min}}^{\infty}zp(z)dz}=(\frac{x}{x_{min}})^{-\alpha+2}$$
 						
 					</section>
+					<section>
+						<h2>Libre de escala (Scale-free)</h2>
+						<p>Nuestra distribucion es invariante bajo cambios de escala.</p>
+						Sea una distribución $p(x)$ que verifique  $p(bx)=g(b)p(x)$ para cualquier b.
+						Sea $x=1$ : $g(b)=p(b)/p(1)$. Entonces $p(bx)=\frac{p(b)p(x)}{p(1)}$. Como es cierta para todo b, podemos derivar:
+						$xp'(bx)=\frac{p'(b)p(x)}{p(1)}$.
+</section>
+						<section>
+						  Si $b=1$ entonces $xp'=p'(1)/p(1)p(x)$.
+						Esta ecuación diferencial la podemos resolver, quedando
+						$log p(x)=p(1)/p'(1)log x + cte$.
+						de donde $p(x)=p(1)x^{-\alpha}$
+						</section>
 				</section>
 
 <!-- Creation mechanism  -->
@@ -160,108 +187,82 @@
 				<section>
 					<section>
 						<h2>Mecanismos de creación</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+                      El hecho de que las leyes de potencias sean tan comunes provoca un esfuerzo por encontrar mecanismos (modelos) basados en el mundo real que reproduzcan esta distribución.  
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						<h2>Proceso de Yule</h2>
+						<p>Proceso que nace inspirado en biología.</p>
+						<p>		Cantidades como el tiempo de vida pueden ofrecer características de leyes de potencias. Sin embargo, un ejemplo muy claro es la distribución del número de especies segun género, familia y el resto de órdenes taxonómicos. </p>
+						<p>Yule ofreció un método simple como explicación.</p>
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
+						<h2>Proceso de Yule</h2>
+						<p>Supongamos un escenario donde nuevas especies aparecen pero nunca se extingue (principal hipótesis y fallo)</p>
+						<p>Las especies se seperan en distintos generos por la especialización (asumamos con una constante estocástica $k$).</p>
+						
+					</section>
+					<section>
+						<h2>Transiciones de Fase y criticalidad</h2>
+						 <img  data-src="img/per1.png">
+						
+					</section>
+										<section>
+						<h2>Transiciones de Fase y criticalidad</h2>
+						
+						 <img  data-src="img/per2.png">
+										</section>
+															<section>
+						<h2>Transiciones de Fase y criticalidad</h2>
+						
+						
+						 <img  data-src="img/per3.png">									</section>
+																				<section>
+						<h2>Transiciones de Fase y criticalidad</h2>
+						
+						 <img  width="608" height="538" data-src="img/per4.png">
+																				</section>
+														
+					<section>
+						<h2>Criticalidad auto-organizada</h2>
+						 <img  data-src="img/self1.png">
+						
+					</section>
+					<section>
+						<h2>Criticalidad auto-organizada</h2>
+						 <img width="408" height="338"  data-src="img/self3.gif">
+						
+					</section>
+					<section>
+						<h2>Criticalidad auto-organizada</h2>
+						 <img width="608" height="538"  data-src="img/self2.png">
+						
+					</section>
+					<section>
+						<h2>Y muchos más</h2>
+						<p>Combinaciones de exponenciales, inversión de cantidades, camino aleatorio, etc.</p>
 						
 					</section>
 				</section>
 
 <!-- Conclusions  -->
 				
-				<section>
+				
 					<section>
 						<h2>Conclusiones</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+			<ul>
+						<li>Área de mucho interés</li>
+						<li>Aún nos queda mucho por aprender</li>
+						<li>Aunque no es oro todo lo que reluce</li>
+					
+					</ul>			
 					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						
-					</section>
-				</section>												
-
-
-
-
+		
 				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					<blockquote >
+						&ldquo; Perhaps our ultimate understanding of scientific topics is measured in terms of our ability to generate metaphoric pictures of what is going on. Maybe understanding is coming up with metaphoric pictures&rdquo;
 					</blockquote>
+					Per Bak (1996). How Nature Works: the science of self-organized criticality
 				</section>
 
 
@@ -276,9 +277,10 @@
 
 
 				<section style="text-align: left;">
-					<h1>THE END</h1>
+				  <h1>THE END</h1>
+				  - Dudas?
 					<p>
-						- <a href="https://github.com/thebooort/geneura-papers-seminar">Source code &amp; documentation</a>
+						- <a href="https://github.com/thebooort/geneura-papers-seminars">Source code &amp; documentation</a>
 					</p>
 				</section>
 
