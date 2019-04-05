@@ -51,52 +51,159 @@
 				</section>
 
 <!-- Introducion  -->
-				<section>
-					<section>
-						<h2>Introducción</h2>
+<section>
+  <section>
+					  <h2>Introducción</h2>
+						<img  data-src="img/cage.png">
 
 					</section>
-				
+					<section>
+					  <h2>Introducción</h2>
+					  	<ul>
+						<li>what is the efficacy of a given drug in a given population?</li>
+						<li>  Whether data can prove an employer guilty of hiring discrimination?</li>
+						<li>  What fraction of past crimes could have been avoided by a given policy?</li>
+						<li> What was the cause of death of a givenindividual, in a specific incident?</li>
+						</ul>
+
+					</section>
+
+					<section>
+					  	These are causal questions because they require
+						  some knowledge of the data-generating process; they cannot be computed from
+						  the data alone, nor from the distributions that govern the data.
+					  </section>
 				</section>
 
-<!-- Mediciones  -->
+<!-- Differences between association and causation  -->
 				
+                                <section>
+				  <section>
+				    <h2>Differences between association and causation</h2>
+					</section>
+					<section>
+					<h2>Standard statistical analysis</h2>
+					<p>Assess parameters of a distribution from samples drawn of that distribution.</p>
+					With the help of such parameters, one can
+					infer associations among variables, estimate beliefs or probabilities of past and
+					future events, as well as update those probabilities in light of new evidence
+					or new measurements.
+					</section>
+					<section>
+					  <ul>
+					  <li>correlation
+					  
+					  <li>regression
+					  <li>dependence
+					  <li>conditional independence
+					 <li> likelihood
+					  <li>marginalization
+</ul>
+					</section>
+					<section>
+					<h2>Causal analysis</h2>
+					Its aim is to infer not only beliefs or probabilities under
+					static conditions, but also the dynamics of beliefs under changing conditions.
+					</section>
+					<section>
+					  <ul>
+					  <li>randomization
+					  <li>influence
+					 <li> effect
+					 <li> confounding
+					 <li> spurious correlation
+					 <li> faithfulness/stability
+					 <li> intervention
+
+					 <li> explanation
+					  </ul>
+					</section>
+				</section>
+
+
+<!-- Structural models, causal effects, and counterfactuals-->
+
 				<section>
 					<section>
+					  <h2>Structural Causal Model (SCM)</h2>
+					  <ul>
+					    <li>structural equation models (SEM)
+					    <li>the potential outcome framework
+					    <li>the graphical models
+					      
+					    </ul>
+					</section>
 					
-					
-					</section>
-				</section>
-
-
-<!-- Ejemplos  -->
-
-				<section>
 					<section>
-					
+					  <h2>Structural Equations Models</h2>
+					  Let be $X$ a disease variable and $Y$  a certain symptom of the disease.
+					  $$ y = \beta x+u_y $$
+					  <p>Where $x$ is the severity of disease and $y$ is the severity of the symptom.</p>
+
+
+					  <img  data-src="img/1dia.png">
+					</section>
+					<section>
+					  <h2>Structural Equations Models</h2>
+					  But this is symetrical and limited. So we changed it:
+					   \begin{aligned} x &=f_{X}\left(u_{X}\right) \\ y &=f_{Y}\left(y, u_{X}\right) \end{aligned}
+					  <img  data-src="img/4dia.png">
+
+					</section>
+					<section>
+					  <h2>Structural Equations Models</h2>
+					 And we can overcome nonlinearity:
+					  \begin{aligned} z &=f_{Z}\left(u_{Z}\right) \\ x &=f_{X}\left(z, u_{X}\right) \\ y &=f_{Y}\left(x, u_{Y}\right) \end{aligned}
+	  				  <img  data-src="img/2dia.png">
+					</section>
+					<section>
+					  <h2>Structural Equations Models</h2>
+					 And model interventions:
+					  \begin{aligned} z &=f_{Z}\left(u_{Z}\right) \\ x &=x_0 \\ y &=f_{Y}\left(x, u_{Y}\right) \end{aligned}
+	  				  <img  data-src="img/3dia.png">
+					</section>
+					<section>
+					  <h2>Structural Equations Models</h2>
+					  <ul>
+					    <li>D-separation
+					  <li>Causal Sufficiency
+					  <li>Causal feedback
+					  </ul>
+					</section>
+					<section>
+					  <h2>Structural Equations Models</h2>
+					  Any probability distribution induced by an acyclic, causally sufficient SCM
+					  M can be factorized as:
+					  $$p_{\mathcal{M}}\left(X_{1}, \ldots, X_{N}\right)=\prod_{i=1}^{N} p_{\mathcal{M}}\left(X_{i} | \mathbf{X}_{\mathrm{pa}(i)}\right)$$
+					  And, after and intervention:
+					  $$p_{\mathcal{M}_{\xi_{l}}}\left(X_{1}, \ldots, X_{N} | \operatorname{do}\left(\mathbf{X}_{l}=\xi_{l}\right)\right)=$$
+					  $$\prod_{i=1 \atop i \notin l}^{N} p_{\mathcal{M}}\left(X_{i} | \mathbf{X}_{\mathrm{pa}(i)}\right) \prod_{i \in I} \mathbf{1}_{\left[X_{i}=\xi_{i}\right]}$$
 					</section>
 				</section>
 
-<!-- Math prop  -->
+<!-- Outcome framework  -->
 				
 				<section>
 					<section>
-						<h2>Algunas ideas matemáticas</h2>
-
+						<h2>Causal infrence and ML</h2>
+						<img  data-src="img/5dia.png">
+						<p><small><a href="https://www.inference.vc/">Diagrams from inFERENCe webpage</a> </small></p>
 					</section>
-
-				</section>
-
-<!-- Creation mechanism  -->
-				
-				<section>
 					<section>
-						<h2>Mecanismos de creación</h2>
-                      El hecho de que las leyes de potencias sean tan comunes provoca un esfuerzo por encontrar mecanismos (modelos) basados en el mundo real que reproduzcan esta distribución.  
+						<h2>Causal infrence and ML</h2>
+						<img  data-src="img/6dia.png">
 					</section>
-
-				
+					<section>
+						<h2>Causal infrence and ML</h2>
+						<img  data-src="img/7dia.png">
+					</section>
+					<section>
+						<h2>Causal infrence and ML</h2>
+						<img width="608" height="538" data-src="img/8dia.png">
+					</section>
 				</section>
+
+
 
 <!-- Conclusions  -->
 				
@@ -104,9 +211,9 @@
 					<section>
 						<h2>Conclusiones</h2>
 			<ul>
-						<li>Área de mucho interés</li>
-						<li>Aún nos queda mucho por aprender</li>
-						<li>Aunque no es oro todo lo que reluce</li>
+						<li>Fundamental area to develop an accurate description of reality</li>
+						<li>Now we have mathematical formulation for this</li>
+						<li>Is not a question of whether you work on deep learning or causal inference </li>
 					
 					</ul>			
 					</section>
